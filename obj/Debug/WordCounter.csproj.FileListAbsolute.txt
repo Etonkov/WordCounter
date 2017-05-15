@@ -1,0 +1,8 @@
+D:\C# project\TEST\WordCounter\WordCounter\bin\Debug\WordCounter.exe.config
+D:\C# project\TEST\WordCounter\WordCounter\bin\Debug\WordCounter.exe
+D:\C# project\TEST\WordCounter\WordCounter\bin\Debug\WordCounter.pdb
+D:\C# project\TEST\WordCounter\WordCounter\obj\Debug\WordCounter.csprojResolveAssemblyReference.cache
+D:\C# project\TEST\WordCounter\WordCounter\obj\Debug\WordCounter.exe
+D:\C# project\TEST\WordCounter\WordCounter\obj\Debug\WordCounter.pdb
+D:\C# project\TEST\WordCounter\WordCounter\bin\Debug\Ninject.dll
+D:\C# project\TEST\WordCounter\WordCounter\bin\Debug\Ninject.xml
