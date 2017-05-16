@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WordCounter.Readers;
+using WordCounter.CharReaders;
 
 namespace WordCounter
 {
@@ -12,17 +12,30 @@ namespace WordCounter
     {
         static void Main(string[] args)
         {
-            ConsoleReader consoleReader = new ConsoleReader();
-            consoleReader.ReadChars();
-            var s1 = Console.ReadLine();
-            var s2 = Console.ReadLine();
-            var s3 = Console.ReadLine();
+            ICharReader reader = new ConsoleCharReader();
 
-            Console.WriteLine();
-            Console.WriteLine(s1);
-            Console.WriteLine(s2);
-            Console.WriteLine(s3);
-            Console.ReadKey();
+            while (true)
+            {
+                char[] c;
+                bool isFinished;
+
+                lock ("lock")
+                {
+                    isFinished = reader.IsFinished;
+
+                    if (isFinished == false)
+                    {
+                        c = reader.ReadChars();
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+
+
+                c.Count();
+            }
         }
         private static void RegisterServices(IKernel kernel)
         {

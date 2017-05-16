@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WordCounter.Counters
+namespace WordCounter.Writers
 {
-    public interface ICounter
+    public interface ICountWriter
     {
-        
+        void WriteCount(long count);
     }
 }

@@ -47,19 +47,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Counters\ICounter.cs" />
+    <Compile Include="WorldCounters\IWorldCounter.cs" />
+    <Compile Include="WorldCounters\SeriesWorldCounter.cs" />
+    <Compile Include="WorldCounters\WorldCounterBase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Readers\ConsoleReader.cs" />
-    <Compile Include="Readers\FileReader.cs" />
+    <Compile Include="CharReaders\ConsoleCharReader.cs" />
+    <Compile Include="CharReaders\FileCharReader.cs" />
+    <Compile Include="CharReaders\ICharReader.cs" />
+    <Compile Include="Writers\ConsoleCountWriter.cs" />
+    <Compile Include="Writers\ICountWriter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Writers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
