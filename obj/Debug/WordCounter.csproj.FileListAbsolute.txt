@@ -13,3 +13,11 @@ D:\C#projects\WordCounter\obj\Debug\WordCounter.csprojResolveAssemblyReference.c
 D:\C#projects\WordCounter\bin\Debug\WordCounter.exe
 D:\C#projects\WordCounter\bin\Debug\WordCounter.pdb
 D:\C#projects\WordCounter\bin\Debug\Ninject.xml
+D:\C# project\ACTUAL\WordCounter\WordCounter\bin\Debug\WordCounter.exe.config
+D:\C# project\ACTUAL\WordCounter\WordCounter\obj\Debug\WordCounter.exe
+D:\C# project\ACTUAL\WordCounter\WordCounter\obj\Debug\WordCounter.pdb
+D:\C# project\ACTUAL\WordCounter\WordCounter\bin\Debug\WordCounter.exe
+D:\C# project\ACTUAL\WordCounter\WordCounter\bin\Debug\WordCounter.pdb
+D:\C# project\ACTUAL\WordCounter\WordCounter\bin\Debug\Ninject.dll
+D:\C# project\ACTUAL\WordCounter\WordCounter\bin\Debug\Ninject.xml
+D:\C# project\ACTUAL\WordCounter\WordCounter\obj\Debug\WordCounter.csprojResolveAssemblyReference.cache

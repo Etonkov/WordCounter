@@ -8,7 +8,7 @@ using WordCounter.Writers;
 
 namespace WordCounter.Counters
 {
-    public abstract class CounterBase : ICounter
+    public abstract class CounterBase
     {
         protected readonly ICharReader Reader;
         protected readonly ICountWriter Writer;

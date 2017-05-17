@@ -10,17 +10,10 @@ namespace WordCounter.CharReaders
 {
     public class ConsoleCharReader: ICharReader
     {
-        ///// <summary>
-        ///// Max array size of the ReadChars() method result.
-        ///// </summary>
-        //private const int OuputSize = 10000;
-
         /// <summary>
         /// Max number of chars(bytes) that can be intered in the console.
         /// </summary>
         private const int BufferSize = 10000000;
-
-        //private bool _isFinished;
 
 
         public ConsoleCharReader()
@@ -36,7 +29,7 @@ namespace WordCounter.CharReaders
         public char[] ReadChars()
         {
 #if DEBUG
-            if (IsFinished == false)
+            if (IsFinished)
             {
                 throw new InvalidOperationException();
             }
@@ -45,11 +38,9 @@ namespace WordCounter.CharReaders
             char[] chars = default(char[]);
             Stream inputStream = Console.OpenStandardInput();
             byte[] bytes = new byte[BufferSize];
-            Console.WriteLine(String.Format("Введите текст(максимум {0} символов):", BufferSize));
+            Console.WriteLine(String.Format("Enter the text(max {0} characters):", BufferSize));
             int outputLength = inputStream.Read(bytes, 0, BufferSize);
-            chars = Encoding.UTF7.GetChars(bytes, 0, outputLength);
-            //Console.WriteLine(result.Count());
-            //Console.ReadKey();
+            chars = Console.InputEncoding.GetChars(bytes, 0, outputLength);
             IsFinished = true;
             return chars;
         }

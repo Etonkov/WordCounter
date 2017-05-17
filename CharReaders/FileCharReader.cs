@@ -31,7 +31,7 @@ namespace WordCounter.CharReaders
         public char[] ReadChars()
         {
 #if DEBUG
-            if (IsFinished == false)
+            if (IsFinished)
             {
                 throw new InvalidOperationException();
             }

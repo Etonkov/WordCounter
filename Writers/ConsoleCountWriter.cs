@@ -10,7 +10,7 @@ namespace WordCounter.Writers
     {
         public void WriteCount(long count)
         {
-            Console.WriteLine(String.Format("Количество слов в тексте: {0}", count));
+            Console.WriteLine(String.Format("Word count: {0}", count));
         }
     }
 }
