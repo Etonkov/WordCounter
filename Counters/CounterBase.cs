@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 using WordCounter.CharReaders;
 using WordCounter.Writers;
 
-namespace WordCounter.WorldCounters
+namespace WordCounter.Counters
 {
-    public abstract class WorldCounterBase : IWorldCounter
+    public abstract class CounterBase : ICounter
     {
         protected readonly ICharReader Reader;
         protected readonly ICountWriter Writer;
 
-        protected WorldCounterBase(ICharReader reader, ICountWriter writer)
+        protected CounterBase(ICharReader reader, ICountWriter writer)
         {
             Reader = reader;
             Writer = writer;
         }
 
-        public abstract void CountWorlds();
+        public abstract void Count();
     }
 }

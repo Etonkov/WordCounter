@@ -1,10 +1,12 @@
 ﻿using Ninject;
+using Ninject.Modules;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WordCounter.CharReaders;
+using WordCounter.Counters;
 
 namespace WordCounter
 {
@@ -12,34 +14,21 @@ namespace WordCounter
     {
         static void Main(string[] args)
         {
-            ICharReader reader = new ConsoleCharReader();
-
-            while (true)
-            {
-                char[] c;
-                bool isFinished;
-
-                lock ("lock")
-                {
-                    isFinished = reader.IsFinished;
-
-                    if (isFinished == false)
-                    {
-                        c = reader.ReadChars();
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
-
-
-                c.Count();
-            }
+            IKernel ninjectKernel = new StandardKernel();
+            //ninjectKernel.Load();
+            Console.ReadKey();
         }
         private static void RegisterServices(IKernel kernel)
         {
-            //kernel.Bind<IMessageService>().To<MessageService>();
+            //kernel.Bind<CounterBase>().To<MessageService>();
+        }
+    }
+
+    public class EmployeeExportModule : NinjectModule
+    {
+        public override void Load()
+        {
+            //Bind<CounterBase>().To<SeriesCounter>().
         }
     }
 }

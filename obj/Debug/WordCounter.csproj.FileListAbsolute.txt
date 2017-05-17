@@ -9,3 +9,7 @@ D:\C# project\TEST\WordCounter\WordCounter\bin\Debug\Ninject.xml
 D:\C#projects\WordCounter\bin\Debug\WordCounter.exe.config
 D:\C#projects\WordCounter\obj\Debug\WordCounter.exe
 D:\C#projects\WordCounter\obj\Debug\WordCounter.pdb
+D:\C#projects\WordCounter\obj\Debug\WordCounter.csprojResolveAssemblyReference.cache
+D:\C#projects\WordCounter\bin\Debug\WordCounter.exe
+D:\C#projects\WordCounter\bin\Debug\WordCounter.pdb
+D:\C#projects\WordCounter\bin\Debug\Ninject.xml

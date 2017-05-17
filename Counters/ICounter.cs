@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WordCounter.WorldCounters
+namespace WordCounter.Counters
 {
-    public interface IWorldCounter
+    public interface ICounter
     {
-        void CountWorlds();
+        void Count();
     }
 }

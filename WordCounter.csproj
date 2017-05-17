@@ -47,15 +47,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WorldCounters\IWorldCounter.cs" />
-    <Compile Include="WorldCounters\SeriesWorldCounter.cs" />
-    <Compile Include="WorldCounters\WorldCounterBase.cs" />
+    <Compile Include="CharReaders\DbCharReader.cs" />
+    <Compile Include="Counters\ParallelCounter.cs" />
+    <Compile Include="Extentions\CharExtentions.cs" />
+    <Compile Include="Counters\ICounter.cs" />
+    <Compile Include="Counters\SeriesCounter.cs" />
+    <Compile Include="Counters\CounterBase.cs" />
+    <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CharReaders\ConsoleCharReader.cs" />
     <Compile Include="CharReaders\FileCharReader.cs" />
     <Compile Include="CharReaders\ICharReader.cs" />
     <Compile Include="Writers\ConsoleCountWriter.cs" />
+    <Compile Include="Writers\DbCountWriter.cs" />
+    <Compile Include="Writers\FileCountWriter.cs" />
     <Compile Include="Writers\ICountWriter.cs" />
   </ItemGroup>
   <ItemGroup>

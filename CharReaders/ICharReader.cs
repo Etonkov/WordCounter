@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WordCounter.CharReaders
 {
-    public interface ICharReader: IDisposable
+    public interface ICharReader
     {
         bool IsFinished { get; }
 

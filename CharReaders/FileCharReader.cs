@@ -12,7 +12,7 @@ namespace WordCounter.CharReaders
         /// <summary>
         /// Max number of chars that can be returned in the ReadChars() method.
         /// </summary>
-        private const int BufferSize = 1000000;
+        private const int BufferSize = 100000;
 
         private const string FilePath = "textfile.txt";
 
@@ -30,9 +30,16 @@ namespace WordCounter.CharReaders
 
         public char[] ReadChars()
         {
+#if DEBUG
+            if (IsFinished == false)
+            {
+                throw new InvalidOperationException();
+            }
+#endif
+
             char[] c = default(char[]);
 
-            if (Reader.Peek() >= 0)
+            if (Reader.EndOfStream == false)
             {
                 c = new char[BufferSize];
                 Reader.Read(c, 0, c.Length);
@@ -40,14 +47,10 @@ namespace WordCounter.CharReaders
             else
             {
                 IsFinished = true;
+                Reader.Close();
             }
 
             return c;
-        }
-
-        public void Dispose()
-        {
-            Reader.Dispose();
         }
     }
 }

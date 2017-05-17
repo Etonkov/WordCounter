@@ -35,20 +35,22 @@ namespace WordCounter.CharReaders
 
         public char[] ReadChars()
         {
-            char[] chars = default(char[]);
-
+#if DEBUG
             if (IsFinished == false)
             {
-                Stream inputStream = Console.OpenStandardInput();
-                byte[] bytes = new byte[BufferSize];
-                Console.WriteLine(String.Format("Введите текст(максимум {0} символов):", BufferSize));
-                int outputLength = inputStream.Read(bytes, 0, BufferSize);
-                chars = Encoding.UTF7.GetChars(bytes, 0, outputLength);
-                //Console.WriteLine(result.Count());
-                //Console.ReadKey();
-                IsFinished = true;
+                throw new InvalidOperationException();
             }
+#endif
 
+            char[] chars = default(char[]);
+            Stream inputStream = Console.OpenStandardInput();
+            byte[] bytes = new byte[BufferSize];
+            Console.WriteLine(String.Format("Введите текст(максимум {0} символов):", BufferSize));
+            int outputLength = inputStream.Read(bytes, 0, BufferSize);
+            chars = Encoding.UTF7.GetChars(bytes, 0, outputLength);
+            //Console.WriteLine(result.Count());
+            //Console.ReadKey();
+            IsFinished = true;
             return chars;
         }
     }
