@@ -1,0 +1,10 @@
+D:\C#projects\WordCounterTests\bin\Debug\WordCounterTests.dll
+D:\C#projects\WordCounterTests\bin\Debug\WordCounterTests.pdb
+D:\C#projects\WordCounterTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\C#projects\WordCounterTests\bin\Debug\WordCounter.exe
+D:\C#projects\WordCounterTests\bin\Debug\Ninject.dll
+D:\C#projects\WordCounterTests\bin\Debug\WordCounter.pdb
+D:\C#projects\WordCounterTests\bin\Debug\Ninject.xml
+D:\C#projects\WordCounterTests\obj\Debug\WordCounterTests.csprojResolveAssemblyReference.cache
+D:\C#projects\WordCounterTests\obj\Debug\WordCounterTests.dll
+D:\C#projects\WordCounterTests\obj\Debug\WordCounterTests.pdb

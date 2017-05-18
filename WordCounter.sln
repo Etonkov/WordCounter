@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCounter", "WordCounter.csproj", "{E3FF622E-CB97-4AE8-8B57-E13F8BF6CF61}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCounter", "WordCounter\WordCounter.csproj", "{E3FF622E-CB97-4AE8-8B57-E13F8BF6CF61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCounterTests", "..\WordCounterTests\WordCounterTests.csproj", "{9E1CC284-DA22-4E11-A685-AA5702DCD8CF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCounterTests", "WordCounterTests\WordCounterTests.csproj", "{9E1CC284-DA22-4E11-A685-AA5702DCD8CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

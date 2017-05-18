@@ -21,3 +21,6 @@ D:\C# project\ACTUAL\WordCounter\WordCounter\bin\Debug\WordCounter.pdb
 D:\C# project\ACTUAL\WordCounter\WordCounter\bin\Debug\Ninject.dll
 D:\C# project\ACTUAL\WordCounter\WordCounter\bin\Debug\Ninject.xml
 D:\C# project\ACTUAL\WordCounter\WordCounter\obj\Debug\WordCounter.csprojResolveAssemblyReference.cache
+D:\C#projects\WordCounter\WordCounter\bin\Debug\WordCounter.exe.config
+D:\C#projects\WordCounter\WordCounter\obj\Debug\WordCounter.exe
+D:\C#projects\WordCounter\WordCounter\obj\Debug\WordCounter.pdb
