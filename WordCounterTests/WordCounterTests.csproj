@@ -51,9 +51,12 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Counters\SeriesCounterTests.cs" />
+    <Compile Include="CharReaders\ReaderMock.cs" />
+    <Compile Include="Counters\IgnoreDigitCounterTests.cs" />
+    <Compile Include="Counters\StandartCounterTests.cs" />
     <Compile Include="Extentions\CharExtentionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Writers\WriterMock.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WordCounter\WordCounter.csproj">
@@ -61,6 +64,7 @@
       <Name>WordCounter</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

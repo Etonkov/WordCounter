@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace WordCounter.CharReaders
 {
@@ -13,20 +10,16 @@ namespace WordCounter.CharReaders
         /// Max number of chars that can be returned in the ReadChars() method.
         /// </summary>
         private const int BufferSize = 100000;
-
-        private const string FilePath = "textfile.txt";
-
         private readonly StreamReader Reader;
 
-        public bool IsFinished { get; private set; }
-
-
-        public FileCharReader()
+        public FileCharReader(string filePath)
         {
-            IsFinished = false;
-            Reader = new StreamReader(FilePath);
+            Console.WriteLine("File reading is initialized...");
+            Reader = new StreamReader(filePath, Encoding.Default);
+            IsFinished = Reader.EndOfStream;
         }
 
+        public bool IsFinished { get; private set; }
 
         public char[] ReadChars()
         {
@@ -36,15 +29,10 @@ namespace WordCounter.CharReaders
                 throw new InvalidOperationException();
             }
 #endif
+            var c = new char[BufferSize];
+            Reader.Read(c, 0, BufferSize);
 
-            char[] c = default(char[]);
-
-            if (Reader.EndOfStream == false)
-            {
-                c = new char[BufferSize];
-                Reader.Read(c, 0, c.Length);
-            }
-            else
+            if (Reader.EndOfStream)
             {
                 IsFinished = true;
                 Reader.Close();

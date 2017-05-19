@@ -1,9 +1,6 @@
 ﻿using Ninject;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
 using WordCounter.CharReaders;
 using WordCounter.Counters;
 using WordCounter.Writers;
@@ -12,8 +9,11 @@ namespace WordCounter.Configurators
 {
     public class KernelManager
     {
-        private KernelManager() { }
+        private const string InputFilePath = "textfile.txt";
+        private const string OutputFilePath = "result.txt";
+        private const string DbConnectionStringName = "TestConnectionString";
 
+        private KernelManager() { }
 
         public static void ConfigureInput(IKernel kernel)
         {
@@ -32,11 +32,15 @@ namespace WordCounter.Configurators
                     break;
                 case '2':
                     Console.WriteLine("File input selected");
-                    kernel.Bind<ICharReader>().To<FileCharReader>();
+                    Console.WriteLine(String.Format("Default input file path is {0}", InputFilePath));
+                    kernel.Bind<ICharReader>().To<FileCharReader>().WithConstructorArgument(InputFilePath);
                     break;
                 case '3':
                     Console.WriteLine("DB input selected");
-                    kernel.Bind<ICharReader>().To<DbCharReader>();
+                    var connectionSettings = ConfigurationManager.ConnectionStrings[DbConnectionStringName];
+                    var connectionString = connectionSettings.ConnectionString;
+                    Console.WriteLine(String.Format("Default connection string is {0}", DbConnectionStringName));
+                    kernel.Bind<ICharReader>().To<DbCharReader>().WithConstructorArgument(connectionString);
                     break;
                 default:
                     Console.WriteLine("!!!Invalid input!!!");
@@ -64,11 +68,15 @@ namespace WordCounter.Configurators
                     break;
                 case '2':
                     Console.WriteLine("File output selected");
-                    kernel.Bind<ICountWriter>().To<FileCountWriter>();
+                    Console.WriteLine(String.Format("Default output file path is {0}", OutputFilePath));
+                    kernel.Bind<ICountWriter>().To<FileCountWriter>().WithConstructorArgument(OutputFilePath);
                     break;
                 case '3':
                     Console.WriteLine("DB output selected");
-                    kernel.Bind<ICountWriter>().To<DbCountWriter>();
+                    var connectionSettings = ConfigurationManager.ConnectionStrings[DbConnectionStringName];
+                    var connectionString = connectionSettings.ConnectionString;
+                    Console.WriteLine(String.Format("Default connection string is {0}", DbConnectionStringName));
+                    kernel.Bind<ICountWriter>().To<DbCountWriter>().WithConstructorArgument(connectionString);
                     break;
                 default:
                     Console.WriteLine("!!!Invalid input!!!");
@@ -82,38 +90,20 @@ namespace WordCounter.Configurators
         public static void ConfigureCounter(IKernel kernel)
         {
             Console.WriteLine("Please select counting mode:");
-            Console.WriteLine("1 - Series");
-            Console.WriteLine("2 - Parallel");
-            Console.WriteLine("3 - Auto");
+            Console.WriteLine("1 - Standart");
+            Console.WriteLine("2 - Ignore digits");
             var key = Console.ReadKey(true).KeyChar;
             Console.WriteLine();
 
             switch (key)
             {
                 case '1':
-                    Console.WriteLine("Series counting mode selected");
-                    kernel.Bind<CounterBase>().To<SeriesCounter>();
+                    Console.WriteLine("Standart counting mode selected");
+                    kernel.Bind<CounterBase>().To<StandartCounter>();
                     break;
                 case '2':
-                    Console.WriteLine("Parallel counting mode selected");
-                    kernel.Bind<CounterBase>().To<ParallelCounter>();
-                    break;
-                case '3':
-                    {
-                        Console.WriteLine("Auto counting mode selected:");
-                        var inputType = kernel.Get<ICharReader>();
-
-                        if (inputType is ConsoleCharReader)
-                        {
-                            Console.WriteLine("Series");
-                            kernel.Bind<CounterBase>().To<SeriesCounter>();
-                        }
-                        else
-                        {
-                            Console.WriteLine("Parallel");
-                            kernel.Bind<CounterBase>().To<ParallelCounter>();
-                        }
-                    }
+                    Console.WriteLine("Ignore digits counting mode selected");
+                    kernel.Bind<CounterBase>().To<IgnoreDigitCounter>();
                     break;
                 default:
                     Console.WriteLine("!!!Invalid input!!!");

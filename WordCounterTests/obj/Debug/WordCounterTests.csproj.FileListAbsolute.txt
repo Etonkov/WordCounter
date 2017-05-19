@@ -8,3 +8,28 @@ D:\C#projects\WordCounterTests\bin\Debug\Ninject.xml
 D:\C#projects\WordCounterTests\obj\Debug\WordCounterTests.csprojResolveAssemblyReference.cache
 D:\C#projects\WordCounterTests\obj\Debug\WordCounterTests.dll
 D:\C#projects\WordCounterTests\obj\Debug\WordCounterTests.pdb
+d:\C#projects\WordCounter\WordCounterTests\obj\Debug\WordCounterTests.csprojResolveAssemblyReference.cache
+d:\C#projects\WordCounter\WordCounterTests\obj\Debug\WordCounterTests.dll
+d:\C#projects\WordCounter\WordCounterTests\obj\Debug\WordCounterTests.pdb
+d:\C#projects\WordCounter\WordCounterTests\bin\Debug\WordCounterTests.dll
+d:\C#projects\WordCounter\WordCounterTests\bin\Debug\WordCounterTests.pdb
+d:\C#projects\WordCounter\WordCounterTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+d:\C#projects\WordCounter\WordCounterTests\bin\Debug\WordCounter.exe
+d:\C#projects\WordCounter\WordCounterTests\bin\Debug\Ninject.dll
+d:\C#projects\WordCounter\WordCounterTests\bin\Debug\WordCounter.pdb
+d:\C#projects\WordCounter\WordCounterTests\bin\Debug\Ninject.xml
+d:\C#projects\WordCounter\WordCounterTests\bin\Debug\test.mdf
+d:\C#projects\WordCounter\WordCounterTests\bin\Debug\test_log.ldf
+d:\C# project\ACTUAL\WordCounter\WordCounterTests\bin\Debug\test.mdf
+d:\C# project\ACTUAL\WordCounter\WordCounterTests\bin\Debug\test_log.ldf
+d:\C# project\ACTUAL\WordCounter\WordCounterTests\bin\Debug\WordCounterTests.dll
+d:\C# project\ACTUAL\WordCounter\WordCounterTests\bin\Debug\WordCounterTests.pdb
+d:\C# project\ACTUAL\WordCounter\WordCounterTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+d:\C# project\ACTUAL\WordCounter\WordCounterTests\bin\Debug\WordCounter.exe
+d:\C# project\ACTUAL\WordCounter\WordCounterTests\bin\Debug\Ninject.dll
+d:\C# project\ACTUAL\WordCounter\WordCounterTests\bin\Debug\WordCounter.pdb
+d:\C# project\ACTUAL\WordCounter\WordCounterTests\bin\Debug\Ninject.xml
+d:\C# project\ACTUAL\WordCounter\WordCounterTests\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+d:\C# project\ACTUAL\WordCounter\WordCounterTests\obj\Debug\WordCounterTests.csprojResolveAssemblyReference.cache
+d:\C# project\ACTUAL\WordCounter\WordCounterTests\obj\Debug\WordCounterTests.dll
+d:\C# project\ACTUAL\WordCounter\WordCounterTests\obj\Debug\WordCounterTests.pdb

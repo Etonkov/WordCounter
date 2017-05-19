@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace WordCounter.CharReaders
 {
@@ -15,16 +10,12 @@ namespace WordCounter.CharReaders
         /// </summary>
         private const int BufferSize = 10000000;
 
-
         public ConsoleCharReader()
         {
             IsFinished = false;
         }
 
-
         public bool IsFinished { get; private set; }
-
-        public void Dispose() { }
 
         public char[] ReadChars()
         {
@@ -34,7 +25,6 @@ namespace WordCounter.CharReaders
                 throw new InvalidOperationException();
             }
 #endif
-
             char[] chars = default(char[]);
             Stream inputStream = Console.OpenStandardInput();
             byte[] bytes = new byte[BufferSize];

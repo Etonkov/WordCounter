@@ -1,16 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace WordCounter.Writers
 {
     public class FileCountWriter : ICountWriter
     {
+        private readonly string FilePath;
+
+        public FileCountWriter(string filePath)
+        {
+            FilePath = filePath;
+        }
+
         public void WriteCount(long count)
         {
-            throw new NotImplementedException();
+            using (var file = new StreamWriter(FilePath, true))
+            {
+                file.WriteLine("[{0}] count: {1}", DateTime.Now, count);
+            }
+
+            Console.WriteLine(String.Format("Result was saved in {0}", FilePath));
         }
     }
 }

@@ -1,14 +1,7 @@
 ﻿using Ninject;
-using Ninject.Modules;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WordCounter.CharReaders;
 using WordCounter.Configurators;
 using WordCounter.Counters;
-using WordCounter.Writers;
 
 namespace WordCounter
 {
@@ -34,26 +27,13 @@ namespace WordCounter
                 Console.WriteLine();
                 Console.WriteLine("Press 'ESC' to exit or any key to continue...");
 
-                if (Console.ReadKey().Key == ConsoleKey.Escape)
+                if (Console.ReadKey(true).Key == ConsoleKey.Escape)
                 {
                     break;
                 }
 
                 Console.WriteLine();
             }
-        }
-
-        private static void RegisterServices(IKernel kernel)
-        {
-            //kernel.Bind<CounterBase>().To<MessageService>();
-        }
-    }
-
-    public class EmployeeExportModule : NinjectModule
-    {
-        public override void Load()
-        {
-            //Bind<CounterBase>().To<SeriesCounter>().
         }
     }
 }
