@@ -16,24 +16,27 @@ namespace WordCounter.Counters
             long wordCount = 0;
             bool previousIsWordPart = false;
 
-            while (Reader.IsFinished == false)
+            using (Reader)
             {
-                var chars = Reader.ReadChars();
-
-                foreach (var charItem in chars)
+                while (Reader.IsFinished == false)
                 {
-                    if (charItem.IsWordPart())
-                    {
-                        if (previousIsWordPart == false)
-                        {
-                            wordCount++;
-                        }
+                    var chars = Reader.ReadChars();
 
-                        previousIsWordPart = true;
-                    }
-                    else
+                    foreach (var charItem in chars)
                     {
-                        previousIsWordPart = false;
+                        if (charItem.IsWordPart())
+                        {
+                            if (previousIsWordPart == false)
+                            {
+                                wordCount++;
+                            }
+
+                            previousIsWordPart = true;
+                        }
+                        else
+                        {
+                            previousIsWordPart = false;
+                        }
                     }
                 }
             }

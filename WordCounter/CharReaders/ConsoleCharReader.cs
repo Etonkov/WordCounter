@@ -34,5 +34,7 @@ namespace WordCounter.CharReaders
             IsFinished = true;
             return chars;
         }
+
+        public void Dispose() { }
     }
 }

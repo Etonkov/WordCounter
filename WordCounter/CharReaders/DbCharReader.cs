@@ -51,13 +51,17 @@ namespace WordCounter.CharReaders
             if (DbTextReader.Read(buffer, 0, BufferSize) <= 0)
             {
                 IsFinished = true;
-                DbTextReader.Close();
-                SqlReader.Close();
-                Command.Dispose();
-                Connection.Close();
             }
 
             return buffer;
+        }
+
+        public void Dispose()
+        {
+            DbTextReader.Close();
+            SqlReader.Close();
+            Command.Dispose();
+            Connection.Close();
         }
     }
 }

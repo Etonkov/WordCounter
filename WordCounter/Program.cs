@@ -21,8 +21,16 @@ namespace WordCounter
                 KernelManager.ConfigureOutput(ninjectKernel);
                 KernelManager.ConfigureCounter(ninjectKernel);
 
-                var counter = ninjectKernel.Get<CounterBase>();
-                counter.Count();
+                try
+                {
+                    var counter = ninjectKernel.Get<CounterBase>();
+                    counter.Count();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("***!!!ERROR!!!***");
+                    Console.WriteLine("Message: " + e.Message);
+                }
 
                 Console.WriteLine();
                 Console.WriteLine("Press 'ESC' to exit or any key to continue...");

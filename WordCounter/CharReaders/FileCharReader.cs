@@ -35,10 +35,14 @@ namespace WordCounter.CharReaders
             if (Reader.EndOfStream)
             {
                 IsFinished = true;
-                Reader.Close();
             }
 
             return c;
+        }
+
+        public void Dispose()
+        {
+            Reader.Dispose();
         }
     }
 }

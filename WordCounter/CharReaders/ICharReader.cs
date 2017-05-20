@@ -1,6 +1,8 @@
-﻿namespace WordCounter.CharReaders
+﻿using System;
+
+namespace WordCounter.CharReaders
 {
-    public interface ICharReader
+    public interface ICharReader: IDisposable
     {
         bool IsFinished { get; }
 
