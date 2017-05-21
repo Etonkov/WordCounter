@@ -10,7 +10,7 @@ namespace WordCounter.Counters.Tests
     public class StandartCounterTests
     {
         [TestMethod()]
-        public void CountTest()
+        public void StandartCounter_CountTest()
         {
             // Arrange.
             string text1 =

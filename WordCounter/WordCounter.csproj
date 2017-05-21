@@ -66,6 +66,7 @@
     <Compile Include="CharReaders\DbCharReader.cs" />
     <Compile Include="Configurators\KernelManager.cs" />
     <Compile Include="Counters\IgnoreDigitCounter.cs" />
+    <Compile Include="Counters\ParallelCounter.cs" />
     <Compile Include="Extentions\CharExtentions.cs" />
     <Compile Include="Counters\StandartCounter.cs" />
     <Compile Include="Counters\CounterBase.cs" />

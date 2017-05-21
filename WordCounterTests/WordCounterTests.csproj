@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="CharReaders\ReaderMock.cs" />
     <Compile Include="Counters\IgnoreDigitCounterTests.cs" />
+    <Compile Include="Counters\ParallelCounterTests.cs" />
     <Compile Include="Counters\StandartCounterTests.cs" />
     <Compile Include="Extentions\CharExtentionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

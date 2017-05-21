@@ -18,8 +18,11 @@ namespace WordCounter
             {
                 IKernel ninjectKernel = new StandardKernel();
                 KernelManager.ConfigureInput(ninjectKernel);
+                Console.WriteLine();
                 KernelManager.ConfigureOutput(ninjectKernel);
+                Console.WriteLine();
                 KernelManager.ConfigureCounter(ninjectKernel);
+                Console.WriteLine();
 
                 try
                 {

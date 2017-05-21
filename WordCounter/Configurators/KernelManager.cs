@@ -47,8 +47,6 @@ namespace WordCounter.Configurators
                     ConfigureInput(kernel);
                     break;
             }
-
-            Console.WriteLine();
         }
 
         public static void ConfigureOutput(IKernel kernel)
@@ -83,8 +81,6 @@ namespace WordCounter.Configurators
                     ConfigureOutput(kernel);
                     break;
             }
-
-            Console.WriteLine();
         }
 
         public static void ConfigureCounter(IKernel kernel)
@@ -92,6 +88,7 @@ namespace WordCounter.Configurators
             Console.WriteLine("Please select counting mode:");
             Console.WriteLine("1 - Standart");
             Console.WriteLine("2 - Ignore digits");
+            Console.WriteLine("3 - Parallel");
             var key = Console.ReadKey(true).KeyChar;
             Console.WriteLine();
 
@@ -105,13 +102,15 @@ namespace WordCounter.Configurators
                     Console.WriteLine("Ignore digits counting mode selected");
                     kernel.Bind<CounterBase>().To<IgnoreDigitCounter>();
                     break;
+                case '3':
+                    Console.WriteLine("Parallel counting mode selected");
+                    kernel.Bind<CounterBase>().To<ParallelCounter>();
+                    break;
                 default:
                     Console.WriteLine("!!!Invalid input!!!");
                     ConfigureCounter(kernel);
                     break;
             }
-
-            Console.WriteLine();
         }
     }
 }

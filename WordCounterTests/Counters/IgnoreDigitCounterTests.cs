@@ -10,7 +10,7 @@ namespace WordCounter.Counters.Tests
     public class IgnoreDigitCounterTests
     {
         [TestMethod()]
-        public void CountTest()
+        public void IgnoreDigitCounter_CountTest()
         {
             // Arrange.
             string text1 =

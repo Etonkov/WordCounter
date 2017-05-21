@@ -1,4 +1,5 @@
-﻿using WordCounter.CharReaders;
+﻿using System.Diagnostics;
+using WordCounter.CharReaders;
 using WordCounter.Extentions;
 using WordCounter.Writers;
 

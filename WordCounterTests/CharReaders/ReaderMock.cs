@@ -39,5 +39,9 @@ namespace WordCounterTests.CharReaders
 
             return c;
         }
+
+        public void Dispose()
+        {
+        }
     }
 }
